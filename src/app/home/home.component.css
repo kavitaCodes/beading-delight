@@ -1,0 +1,19 @@
+
+p{
+  margin-top: 50px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+  font-style: italic;
+}
+
+div{
+margin-top: 20px;
+border:2px solid rgb(189, 35, 35);
+height: 35vh;
+background-image: url("../../assets/images/beadweaving101-448x224_448x224.jpg");
+background-position: center;
+Background-size: cover;
+}
+
+
+
