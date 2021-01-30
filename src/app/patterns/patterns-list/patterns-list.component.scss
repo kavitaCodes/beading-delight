@@ -1,0 +1,36 @@
+*{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+div{
+  padding-top: 20px;
+}
+
+
+h4{
+  text-align: center;
+
+   font-style: italic;
+  color: rgb(179, 41, 172);
+}
+
+.img_description {
+  position: absolute;
+  text-align: center;
+  top: 6;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(108, 138, 158, 0.72);
+  color:black;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.col-xs-4:hover .img_description {
+  visibility: visible;
+    opacity: 1;
+
+}
+.col-xs-4:hover .caption{
+  visibility: hidden;
+}

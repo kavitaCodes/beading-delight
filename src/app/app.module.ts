@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PatternService } from './patterns/pattern.service';
 import { PatternsComponent } from './patterns/patterns.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { PatternDetailComponent } from './patterns/pattern-detail/pattern-detail.component';
+import { PatternsListComponent } from './patterns/patterns-list/patterns-list.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +20,17 @@ import { FormsModule } from '@angular/forms';
     ShoppingListComponent,
     HeaderComponent,
     ContactUsComponent,
-    HomeComponent
+    HomeComponent,
+    PatternDetailComponent,
+    PatternsListComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PatternService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.css']
+  styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
 
@@ -16,7 +16,7 @@ defaultText= 'We would love to hear from you!';
 
   onSubmit(form: NgForm){
     console.log(form);
-    //  form.reset();
+      form.reset();
   }
 
   deleteText(){

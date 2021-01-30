@@ -10,7 +10,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 const appRoutes: Routes=[
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component:HomeComponent},
-  { path: 'patterns', component:PatternsComponent},
+   { path: 'patterns', component:PatternsComponent},
   { path: 'shopping-list', component:ShoppingListComponent },
   { path: 'contact-us', component:ContactUsComponent }
 ];
