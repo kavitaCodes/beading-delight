@@ -1,17 +1,13 @@
- $navbar-fontStyle: italic;
-.navbar{
+$myFontStyle: italic;
 
-  /* height: 60px; */
-  /* height: 6vh; */
+.navbar {
   margin-top: 25px;
   border: 3px solid rgb(175, 175, 206);
+  font-size: large;
+  font-style: $myFontStyle;
 }
 
-
-.navbar-brand{
-  // font-style: italic;
-   font-style: $navbar-fontStyle;
+.navbar-brand {
+  font-style: $myFontStyle;
   font-weight: bold;
 }
-
-

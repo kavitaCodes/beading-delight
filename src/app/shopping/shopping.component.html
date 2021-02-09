@@ -1,0 +1,15 @@
+<div class="container">
+   <br />
+
+  <h5 style="font-size: 1.8rem">Bead stores near you</h5>
+    
+  <div id="map"></div>
+  <br />
+
+  <div class="row">
+    <div class="col-xs-4" *ngFor="let marker of markers">
+      <li>{{ marker.title }}</li>
+      <p>{{ marker.description }}</p>
+    </div>
+  </div>
+</div>

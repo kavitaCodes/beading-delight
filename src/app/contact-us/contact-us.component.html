@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div class="form-group">
-          <label for="">Your Name</label>
+          <label for="">Name</label>
           <input
             type="text"
             class="form-control"
@@ -27,7 +27,7 @@
             required
             email
           />
-          <span class="help-block" *ngIf="!name.valid && name.touched"
+          <span class="help-block" *ngIf="!email.valid && email.touched"
             >Please enter a valid email id.</span
           >
         </div>
@@ -47,7 +47,11 @@
           </textarea>
         </div>
 
-        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!contactForm.valid"
+        >
           Submit
         </button>
       </form>

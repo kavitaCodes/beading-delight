@@ -1,19 +1,19 @@
 <div class="container-fluid">
-  <h4 >Please select any pattern to get more information about it!</h4>
-  <div class="row"  >
-    <div class="col-xs-4" *ngFor='let pattern of patterns'   >
-      
-       <img [src]="pattern.imagePath" alt="{{ pattern.name  }}" class="img-responsive" style="max-height: 200px; " (click)='onSelected()'>
+  <h4>Please select any pattern to get more information about it!</h4>
+  <div class="row">
+    <div class="col-xs-4" *ngFor="let pattern of patterns; let i = index">
+      <a [routerLink]="[i]">
+        <img
+          [src]="pattern.imagePath"
+          alt="{{ pattern.name }}"
+          id="detect"
+          class="img-responsive"
+          style="max-height: 200px"
+        />
 
-      <div class="caption">{{ pattern.name |titlecase }} </div>
-        <p class="img_description">{{pattern.description}}</p>
-
-
-         <!-- <h6>{{ pattern.name }} </h6> -->
-
-    </div>
-
+        <div class="caption">{{ pattern.name | titlecase }}</div>
+        <p class="img_description">{{ pattern.description }}</p>
+      </a>
     </div>
   </div>
-
-
+</div>

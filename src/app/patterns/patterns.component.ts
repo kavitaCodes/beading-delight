@@ -10,16 +10,11 @@ import { PatternService } from './pattern.service';
 })
 
 export class PatternsComponent implements OnInit {
-  selectedPattern : Pattern;
+  
   constructor(private patternService: PatternService) { }
 
   ngOnInit() {
-    this.patternService.patternSelected
-    .subscribe(
-      (pattern: Pattern) =>{
-        this.selectedPattern = pattern;
-      }
-    );
+
   }
 
 }

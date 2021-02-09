@@ -13,7 +13,7 @@
     "target": "es2015",
     "module": "es2020",
     "types": [
-      "googlemaps"
+      //"googlemaps"
     ],
     "lib": [
       "es2018",

@@ -4,23 +4,21 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent implements OnInit {
+  @ViewChild('f', { static: true }) contactForm: NgForm;
+  defaultText = 'We would love to hear from you!';
+  constructor() {}
 
-defaultText= 'We would love to hear from you!';
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  onSubmit() {
+    console.log(this.contactForm);
+    this.contactForm.reset();
   }
 
-  onSubmit(form: NgForm){
-    console.log(form);
-      form.reset();
+  deleteText() {
+    this.defaultText = '';
   }
-
-  deleteText(){
-    this.defaultText='';
-  }
-
 }

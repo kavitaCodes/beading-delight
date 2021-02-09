@@ -1,13 +1,36 @@
 <div class="container">
-<div class="row">
+  <div class="col-xs-5">
+    <div class="row img">
+      <img
+        [src]="pattern.imagePath"
+        alt="{{ pattern.name }}"
+        style="max-height: 300px"
+        class="img-responsive"
+      />
+    </div>
+    <br />
 
-    <img [src]="pattern.imagePath" alt="{{ pattern.name }}" class="img-responsive" >
-<!-- style="max-height: 300px;" -->
-</div>
+    <div class="row">
+      <h4>{{ pattern.name | titlecase }}</h4>
+    </div>
+  </div>
+  <div class="col-xs-7">
+    <hr />
+    <a
+      href="#"
+      class="btn btn-info"
+      type="button"
+      style="cursor: pointer"
+      (click)="downloadPdf(pattern.pdfPath, pattern.name)"
+    >
+      Download the Pattern!
+    </a>
 
-<div class="row">
+    <hr />
+    <h4 class="material">Materials Needed</h4>
+    <p class="list" [innerHTML]="materials"></p>
+    <hr />
 
-    <h1>{{ pattern.name }}</h1>
-
-</div>
+   
+  </div>
 </div>

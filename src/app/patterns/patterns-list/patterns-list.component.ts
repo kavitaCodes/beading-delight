@@ -1,4 +1,4 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Pattern } from '../pattern.model';
 import { PatternService } from '../pattern.service';
@@ -6,23 +6,17 @@ import { PatternService } from '../pattern.service';
 @Component({
   selector: 'app-patterns-list',
   templateUrl: './patterns-list.component.html',
-  styleUrls: ['./patterns-list.component.scss']
+  styleUrls: ['./patterns-list.component.scss'],
 })
 export class PatternsListComponent implements OnInit {
   pattern1: Pattern;
-   patterns: Pattern[];
+  patterns: Pattern[];
+  index: number;
 
-  constructor(private patternService: PatternService) { }
+  constructor(private patternService: PatternService) {}
 
   ngOnInit() {
-     this.patterns= this.patternService.getPatterns();
-     console.log(this.patterns);
+    this.patterns = this.patternService.getPatterns();
+    console.log(this.patterns);
   }
-
-  onSelected(){
-   this.patternService.patternSelected.next(this.pattern1);
-  }
-
-
-
 }

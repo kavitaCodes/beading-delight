@@ -1,23 +1,28 @@
-
-
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from '@angular/router';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
+import { PatternDetailComponent } from './patterns/pattern-detail/pattern-detail.component';
+import { PatternsListComponent } from './patterns/patterns-list/patterns-list.component';
 import { PatternsComponent } from './patterns/patterns.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingComponent } from './shopping/shopping.component';
 
-const appRoutes: Routes=[
+export const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component:HomeComponent},
-   { path: 'patterns', component:PatternsComponent},
-  { path: 'shopping-list', component:ShoppingListComponent },
-  { path: 'contact-us', component:ContactUsComponent }
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'patterns',
+    component: PatternsComponent,
+    children: [
+      { path: '', component: PatternsListComponent },
+      { path: ':id', component: PatternDetailComponent },
+    ],
+  },
+  { path: 'shopping', component: ShoppingComponent },
+  { path: 'contact-us', component: ContactUsComponent },
 ];
 @NgModule({
-imports: [RouterModule.forRoot(appRoutes)],
-exports: [RouterModule]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}

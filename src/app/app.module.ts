@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PatternService } from './patterns/pattern.service';
 import { PatternsComponent } from './patterns/patterns.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingComponent } from './shopping/shopping.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
@@ -17,7 +17,7 @@ import { PatternsListComponent } from './patterns/patterns-list/patterns-list.co
   declarations: [
     AppComponent,
     PatternsComponent,
-    ShoppingListComponent,
+    ShoppingComponent,
     HeaderComponent,
     ContactUsComponent,
     HomeComponent,
