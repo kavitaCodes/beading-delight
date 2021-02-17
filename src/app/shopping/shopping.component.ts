@@ -9,8 +9,10 @@ import {} from 'googlemaps';
 })
 export class ShoppingComponent implements OnInit {
   @ViewChild("map",{ static: false }) mapElement: any;
+//  access to the map element in DOM
 
   map: google.maps.Map;
+  // instance of google maps API
 
   markers = [
     {
@@ -35,11 +37,13 @@ export class ShoppingComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {}
-
-  ngAfterViewInit() {
-    this.loadMap();
+  ngOnInit() {
+     this.loadMap();
   }
+
+  // ngAfterViewInit() {
+  //   this.loadMap();
+  // }
 
   loadMap() {
     let mapOptions = {
@@ -60,7 +64,7 @@ export class ShoppingComponent implements OnInit {
       lng: string;
       description: string;
     };
-    console.log(this.markers.length);
+    //console.log(this.markers.length);
 
     for (let i = 0; i < this.markers.length; i++) {
       let data = this.markers[i];

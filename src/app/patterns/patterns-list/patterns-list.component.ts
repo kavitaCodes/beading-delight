@@ -9,9 +9,9 @@ import { PatternService } from '../pattern.service';
   styleUrls: ['./patterns-list.component.scss'],
 })
 export class PatternsListComponent implements OnInit {
-  pattern1: Pattern;
+  // pattern1: Pattern;
   patterns: Pattern[];
-  index: number;
+  // index: number;
 
   constructor(private patternService: PatternService) {}
 

@@ -27,6 +27,11 @@ export class PatternDetailComponent implements OnInit {
       this.id = +params['id'];
       this.pattern = this.patternService.getPattern(this.id);
     });
+
+    this.http
+       .get(this.pattern.textPath, { responseType: 'text' })
+       .subscribe((data) => (this.materials = data));
+
   }
 
   downloadPdf(path: string, name: string) {
@@ -34,9 +39,9 @@ export class PatternDetailComponent implements OnInit {
     FileSaver.saveAs(path, name);
   }
 
-  ngAfterViewInit() {
-    this.http
-      .get(this.pattern.textPath, { responseType: 'text' })
-      .subscribe((data) => (this.materials = data));
-  }
+  // ngAfterViewInit() {
+  //   this.http
+  //     .get(this.pattern.textPath, { responseType: 'text' })
+  //     .subscribe((data) => (this.materials = data));
+  // }
 }
